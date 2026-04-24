@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spendly — Finance Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">CREDIT<span>$</span></div>
+    <div class="header-month" id="header-month-label"></div>
+  </header>
+
+  <main>
+    <div class="month-nav">
+      <button id="prev-month" type="button">&#8592;</button>
+      <div class="cur-month" id="cur-month-label"></div>
+      <button id="next-month" type="button">&#8594;</button>
+    </div>
+
+    <div class="summary">
+      <div class="sum-card green">
+        <div class="sum-label">Total Income</div>
+        <div class="sum-amount" id="total-income">₹0.00</div>
+        <div class="sum-sub" id="income-count">0 transactions</div>
+      </div>
+      <div class="sum-card red">
+        <div class="sum-label">Total Spent</div>
+        <div class="sum-amount" id="total-expense">₹0.00</div>
+        <div class="sum-sub" id="expense-count">0 transactions</div>
+      </div>
+      <div class="sum-card accent">
+        <div class="sum-label">Net Balance</div>
+        <div class="sum-amount" id="net-balance">₹0.00</div>
+        <div class="sum-sub" id="balance-note">—</div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title"><span class="dot"></span>Add Transaction</div>
+        <div class="form-row">
+          <div class="type-toggle">
+            <button id="btn-income" class="active income" type="button">+ Income</button>
+            <button id="btn-expense" class="expense" type="button">− Expense</button>
+          </div>
+          <div class="input-group">
+            <label for="inp-desc">Description</label>
+            <input type="text" id="inp-desc" placeholder="e.g. Rent, Salary, Coffee…" maxlength="50" />
+          </div>
+          <div class="input-row">
+            <div class="input-group">
+              <label for="inp-amount">Amount (₹)</label>
+              <input type="text" id="inp-amount" min="0" />
+            </div>
+            <div class="input-group">
+              <label for="inp-cat">Category</label>
+              <select id="inp-cat">
+                <option value="Food">🍜 Food</option>
+                <option value="Transport">🚗 Transport</option>
+                <option value="Shopping">🛍 Shopping</option>
+                <option value="Health">💊 Health</option>
+                <option value="Entertainment">🎬 Entertainment</option>
+                <option value="Utilities">💡 Utilities</option>
+                <option value="Salary" selected>💼 Salary</option>
+                <option value="Freelance">💻 Freelance</option>
+                <option value="Other">📦 Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="inp-date">Date</label>
+            <input type="date" id="inp-date" />
+          </div>
+          <button class="add-btn" id="add-transaction" type="button">Add Transaction</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="dot"></span>Spending by Category</div>
+        <div class="chart-wrap">
+          <div class="donut-container">
+            <svg viewBox="0 0 120 120" width="130" height="130">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--paper2)" stroke-width="18" />
+              <g id="donut-arcs"></g>
+            </svg>
+            <div class="donut-center">
+              <div class="dc-num" id="donut-center-num">—</div>
+              <div class="dc-label">spent</div>
+            </div>
+          </div>
+          <div class="legend" id="donut-legend">
+            <div class="empty-state" style="padding:0;text-align:left;font-size:12px">No expenses yet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title"><span class="dot"></span>Recent Transactions</div>
+        <div class="scroll-list">
+          <div class="tx-list" id="recent-list">
+            <div class="empty-state"><div class="es-icon">🧾</div>No transactions yet</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="dot"></span>Category Breakdown</div>
+        <div class="progress-section" id="cat-breakdown">
+          <div class="empty-state"><div class="es-icon">📊</div>No expenses yet</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card full-card">
+      <div class="card-title"><span class="dot"></span>All Transactions</div>
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="income" type="button">Income</button>
+        <button class="filter-btn" data-filter="expense" type="button">Expense</button>
+      </div>
+      <div class="scroll-list">
+        <div class="tx-list" id="all-list">
+          <div class="empty-state"><div class="es-icon">📋</div>No transactions this month</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

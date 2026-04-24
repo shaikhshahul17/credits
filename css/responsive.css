@@ -1,0 +1,200 @@
+@media (max-width: 900px) {
+  main {
+    padding: 24px 16px 60px;
+  }
+
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .sum-amount {
+    font-size: 22px;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .chart-wrap {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    padding: 0 16px;
+    height: 54px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .header-month {
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  main {
+    padding: 18px 12px 60px;
+  }
+
+  .month-nav {
+    margin-bottom: 16px;
+  }
+
+  .month-nav .cur-month {
+    font-size: 16px;
+  }
+
+  .month-nav button {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .sum-card {
+    padding: 16px 18px;
+  }
+
+  .sum-amount {
+    font-size: 26px;
+  }
+
+  .sum-label {
+    font-size: 10px;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .card {
+    padding: 18px 16px;
+  }
+
+  .card-title {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .type-toggle button {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  .add-btn {
+    font-size: 13px;
+    padding: 11px;
+  }
+
+  .chart-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .donut-container {
+    align-self: center;
+  }
+
+  .legend {
+    width: 100%;
+  }
+
+  .filter-row {
+    gap: 6px;
+  }
+
+  .filter-btn {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .tx-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .tx-name {
+    font-size: 12px;
+  }
+
+  .tx-meta {
+    font-size: 10px;
+  }
+
+  .tx-amount {
+    font-size: 12px;
+  }
+
+  .tx-del {
+    font-size: 12px;
+  }
+
+  .scroll-list {
+    max-height: 260px;
+  }
+
+  .progress-cat {
+    font-size: 11px;
+  }
+
+  .progress-val {
+    font-size: 10px;
+  }
+
+  .progress-track {
+    height: 5px;
+  }
+
+  .full-card {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .sum-amount {
+    font-size: 22px;
+  }
+
+  header {
+    padding: 0 12px;
+  }
+
+  .header-month {
+    display: none;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+}

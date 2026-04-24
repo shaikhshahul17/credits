@@ -1,0 +1,49 @@
+:root {
+  --ink: #3b2e1a;
+  --ink2: #5c4a2e;
+  --ink3: #9a7f58;
+  --paper: #f5e8cc;
+  --paper2: #eeddb8;
+  --paper3: #e5d09e;
+  --header-bg: #C47820;
+  --header-border: rgba(139,82,10,0.25);
+  --card-bg: #fdf4e3;
+  --accent: #C47820;
+  --accent2: #d98f30;
+  --green: #3a7a5a;
+  --green2: #5aaa7a;
+  --red: #b83a3a;
+  --red2: #d85a5a;
+  --border: rgba(139,82,10,0.15);
+  --radius: 16px;
+  --shadow: 0 2px 20px rgba(139,82,10,0.10);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: #F9EDCC;
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
